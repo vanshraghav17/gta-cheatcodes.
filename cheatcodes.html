@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Complete list of cheat codes for top 50 GTA versions with dynamic backgrounds and Google Adsense integration." />
+<meta name="keywords" content="GTA Cheat Codes, GTA V, GTA San Andreas, GTA IV, Game Cheats" />
+<meta name="author" content="Your Name" />
+<title>GTA Cheat Codes - All Versions</title>
+<style>
+  body, html {
+    margin: 0; padding: 0; min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000; color: #00ffcc;
+    overflow-x: hidden;
+  }
+  nav {
+    background: rgba(0,0,0,0.85);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    color: #00ffcc;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #fff;
+  }
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    font-size: 1.8rem;
+  }
+  #background {
+    position: fixed;
+    top:0; left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.35);
+    transition: background-image 0.8s ease-in-out;
+  }
+  .container {
+    max-width: 900px;
+    margin: 2rem auto 4rem auto;
+    background: rgba(0,0,0,0.7);
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    color: #00ffcc;
+  }
+  .version-select {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  select {
+    background: #111;
+    color: #00ffcc;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  ul.cheats-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  ul.cheats-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,255,204,0.2);
+  }
+  /* Adsense container */
+  .adsense-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+</style>
+
+<!-- Google Adsense script -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script>
+  // Data for cheat codes & backgrounds (sample 5 versions, can expand)
+  const gtaData = {
+    "GTA V": {
+      cheats: [
+        {code: "PAINKILLER", desc: "Invincibility for 5 minutes"},
+        {code: "CATCHME", desc: "Fast Run"},
+        {code: "POWERUP", desc: "Recharge Ability"},
+        {code: "FUGITIVE", desc: "Increase Wanted Level"}
+      ],
+      background: "https://wallpapercave.com/wp/wp4921133.jpg"
+    },
+    "GTA IV": {
+      cheats: [
+        {code: "482-555-0100", desc: "Full Health and Armor"},
+        {code: "486-555-0100", desc: "Weapons"},
+        {code: "267-555-0100", desc: "Remove Wanted Level"},
+        {code: "362-555-0100", desc: "Spawn Annihilator Helicopter"}
+      ],
+      background: "https://wallpaperaccess.com/full/221978.jpg"
+    },
+    "GTA San Andreas": {
+      cheats: [
+        {code: "HESOYAM", desc: "Health, Armor, $250,000"},
+        {code: "BAGUVIX", desc: "Semi-infinite Health"},
+        {code: "ROCKETMAN", desc: "Spawn Jetpack"},
+        {code: "AEZAKMI", desc: "Never Wanted"}
+      ],
+      background: "https://wallpapercave.com/wp/wp1821649.jpg"
+    },
+    "GTA Vice City": {
+      cheats: [
+        {code: "ASPIRINE", desc: "Full Health"},
+        {code: "PRECIOUSPROTECTION", desc: "Full Armor"},
+        {code: "COMEFLYWITHME", desc: "Flying Cars"},
+        {code: "BIGBANG", desc: "Explode Nearby Cars"}
+      ],
+      background: "https://wallpapercave.com/wp/wp1839140.jpg"
+    },
+    "GTA III": {
+      cheats: [
+        {code: "GUNSGUNSGUNS", desc: "All Weapons"},
+        {code: "IFIWEREARICHMAN", desc: "Money Cheat"},
+        {code: "ILIKEDRESSINGUP", desc: "Change Outfit"},
+        {code: "NOBODYLIKESME", desc: "Lower Wanted Level"}
+      ],
+      background: "https://wallpapercave.com/wp/wp1839154.jpg"
+    }
+    // Add more GTA versions and cheat codes as needed...
+  };
+
+  function loadCheats(version) {
+    const cheatList = document.getElementById('cheat-list');
+    cheatList.innerHTML = '';
+    gtaData[version].cheats.forEach(cheat => {
+      const li = document.createElement('li');
+      li.innerHTML = `<strong>${cheat.code}</strong> - ${cheat.desc}`;
+      cheatList.appendChild(li);
+    });
+    // Change

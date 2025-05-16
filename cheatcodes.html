@@ -3,121 +3,134 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Welcome to GTA Cheat Codes Library - Your ultimate source for all Grand Theft Auto game cheats!" />
-    <meta name="keywords" content="GTA Cheat Codes, GTA Games, GTA V, GTA San Andreas, Game Cheats" />
+    <meta name="description" content="All GTA Cheat Codes for top 50 versions with dynamic background and easy navigation." />
+    <meta name="keywords" content="GTA Cheat Codes, GTA Versions, GTA V Cheats, GTA San Andreas Cheats, Game Cheats" />
     <meta name="author" content="Your Name" />
-    <title>Welcome - GTA Cheat Codes Library</title>
+    <title>GTA Cheat Codes - All Versions</title>
 
     <style>
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: white;
-            overflow: hidden;
-        }
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: url('https://media.giphy.com/media/3ohhwxpj3lQ6zgZqik/giphy.gif') no-repeat center center/cover;
-            z-index: -1;
-            opacity: 0.25;
-        }
-        header {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: rgba(0, 0, 0, 0.75);
-            backdrop-filter: blur(10px);
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        p {
-            font-size: 1.2rem;
-        }
-        nav {
+            background: #111;
+            color: #eee;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 1rem;
+            flex-direction: column;
+            align-items: center;
         }
+
+        header {
+            background: rgba(0,0,0,0.85);
+            width: 100%;
+            padding: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(8px);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #00ffcc;
+        }
+
+        nav {
+            margin: 1rem 0;
+        }
+
         nav a {
             color: #00ffcc;
-            text-decoration: none;
             margin: 0 1rem;
-            font-weight: bold;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
             transition: color 0.3s;
         }
+
         nav a:hover {
-            color: #ffffff;
+            color: #fff;
         }
-        .cta {
-            text-align: center;
-            margin-top: 3rem;
-            animation: fadeIn 2s ease-in-out;
+
+        main {
+            flex: 1;
+            width: 90%;
+            max-width: 900px;
+            background: rgba(0,0,0,0.75);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 20px #00ffcc88;
+            overflow-y: auto;
+            max-height: 75vh;
         }
-        .cta a {
-            background-color: #00ffcc;
-            color: #000;
-            padding: 1rem 2rem;
+
+        select {
+            padding: 0.6rem 1rem;
+            font-size: 1.1rem;
             border-radius: 5px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background-color 0.3s;
+            border: none;
+            margin-bottom: 1.5rem;
+            background: #222;
+            color: #eee;
         }
-        .cta a:hover {
-            background-color: #00c4a0;
+
+        .cheat-list {
+            list-style: none;
+            padding: 0;
         }
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(30px); }
-            100% { opacity: 1; transform: translateY(0); }
+
+        .cheat-list li {
+            margin-bottom: 0.7rem;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #00ffcc44;
+            padding-bottom: 0.3rem;
         }
-        @media screen and (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
-            .cta a { padding: 0.8rem 1.5rem; }
-        }
-        /* Ad container styling */
+
+        /* Ad container */
         .ad-container {
             margin: 2rem auto;
             max-width: 728px;
             text-align: center;
         }
+
+        /* Dynamic background style for container */
+        body.dynamic-bg {
+            background: url('https://media.giphy.com/media/3ohhwxpj3lQ6zgZqik/giphy.gif') no-repeat center center/cover;
+            transition: background 0.5s ease-in-out;
+        }
+
     </style>
 
-    <!-- Google AdSense script, head ke end mein daala gaya -->
+    <!-- Google AdSense script - head ke end me -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2273497815445713"
      crossorigin="anonymous"></script>
-     
-    <script>
-        window.addEventListener("load", () => {
-            const audio = new Audio("https://www.myinstants.com/media/sounds/gta-san-andreas.mp3");
-            audio.volume = 0.1;
-            audio.play();
-        });
-    </script>
-</head>
-<body>
-    <header>
-        <h1>Welcome to GTA Cheat Codes Library</h1>
-        <p>Your ultimate destination for GTA cheat codes across all versions</p>
-    </header>
 
+</head>
+<body class="dynamic-bg">
+
+<header>
+    <h1>GTA Cheat Codes - All Versions</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="cheatcodes.html">Cheat Codes</a>
     </nav>
+</header>
 
-    <div class="cta">
-        <a href="cheatcodes.html">View All Cheat Codes</a>
-    </div>
+<main>
+    <label for="gtaVersions">Select GTA Version:</label><br />
+    <select id="gtaVersions">
+        <option value="">--Select Version--</option>
+        <option value="gta3">GTA III</option>
+        <option value="gtaVice">GTA Vice City</option>
+        <option value="gtaSanAndreas">GTA San Andreas</option>
+        <option value="gta4">GTA IV</option>
+        <option value="gta5">GTA V</option>
+        <!-- Add more options for up to top 50 versions -->
+    </select>
 
-    <!-- Google AdSense Ad Unit - yahan ad dikhayega -->
+    <ul id="cheatList" class="cheat-list"></ul>
+
+    <!-- Google AdSense Ad Unit -->
     <div class="ad-container">
         <ins class="adsbygoogle"
              style="display:block"
@@ -129,6 +142,58 @@
              (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
+</main>
+
+<script>
+    // Cheats data for few GTA versions (tu expand kar sakta hai)
+    const gtaCheats = {
+        gta3: [
+            { code: "GUNSGUNSGUNS", desc: "Get all weapons" },
+            { code: "IFIWEREARICHMAN", desc: "Money cheat" },
+            { code: "ASPIRINE", desc: "Full health" }
+        ],
+        gtaVice: [
+            { code: "BIGBANG", desc: "Explosion all cars" },
+            { code: "COMEFLYWITHME", desc: "Flying cars" },
+            { code: "PANZER", desc: "Spawn tank" }
+        ],
+        gtaSanAndreas: [
+            { code: "HESOYAM", desc: "Full health, armor & $250k" },
+            { code: "ROCKETMAN", desc: "Spawn jetpack" },
+            { code: "BAGUVIX", desc: "Infinite health" }
+        ],
+        gta4: [
+            { code: "3625550100", desc: "Spawn Annihilator Helicopter" },
+            { code: "4825550100", desc: "Spawn Jetmax Boat" }
+        ],
+        gta5: [
+            { code: "PAINKILLER", desc: "Invincibility for 5 mins" },
+            { code: "TURTLE", desc: "Full health & armor" }
+        ]
+    };
+
+    const select = document.getElementById('gtaVersions');
+    const cheatList = document.getElementById('cheatList');
+
+    select.addEventListener('change', () => {
+        const version = select.value;
+        cheatList.innerHTML = '';
+
+        if (!version) return;
+
+        const cheats = gtaCheats[version];
+        if (!cheats) {
+            cheatList.innerHTML = '<li>No cheat codes found for this version.</li>';
+            return;
+        }
+
+        cheats.forEach(ch => {
+            const li = document.createElement('li');
+            li.textContent = `${ch.code} — ${ch.desc}`;
+            cheatList.appendChild(li);
+        });
+    });
+</script>
 
 </body>
 </html>
